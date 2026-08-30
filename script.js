@@ -2,6 +2,12 @@ const menuBtn = document.getElementById("menu-btn");
 
 const navLinks = document.querySelector(".nav-links");
 
+const themeBtn = document.getElementById("theme-btn");
+
+
+// =========================
+// MENÚ MOBILE
+// =========================
 
 menuBtn.addEventListener("click", () => {
 
@@ -10,7 +16,9 @@ menuBtn.addEventListener("click", () => {
 });
 
 
-// Cerrar el menú cuando se hace clic en un enlace
+// =========================
+// CERRAR EL MENÚ
+// =========================
 
 const links = document.querySelectorAll(".nav-links a");
 
@@ -22,5 +30,27 @@ links.forEach((link) => {
         navLinks.classList.remove("active");
 
     });
+
+});
+
+
+// =========================
+// MODO OSCURO / CLARO
+// =========================
+
+themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+
+
+    if (document.body.classList.contains("light-mode")) {
+
+        themeBtn.textContent = "🌙";
+
+    } else {
+
+        themeBtn.textContent = "☀️";
+
+    }
 
 });

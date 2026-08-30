@@ -17,6 +17,8 @@ body {
     background-color: #0f172a;
     color: #e2e8f0;
     line-height: 1.6;
+
+    transition: background-color 0.3s, color 0.3s;
 }
 
 
@@ -45,6 +47,8 @@ body {
     z-index: 1000;
 
     border-bottom: 1px solid #1e293b;
+
+    transition: background-color 0.3s;
 }
 
 .logo {
@@ -80,6 +84,36 @@ body {
 
 .nav-links a:hover {
     color: #38bdf8;
+}
+
+
+/* BOTÓN MODO OSCURO / CLARO */
+
+.theme-btn {
+    background: transparent;
+
+    border: 1px solid #38bdf8;
+
+    color: white;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    margin-left: 20px;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #38bdf8;
+
+    transform: rotate(20deg);
 }
 
 
@@ -298,15 +332,15 @@ body {
 
 .technologies-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 850px;
-    margin: auto;
 
     grid-template-columns:
         repeat(auto-fit, minmax(180px, 1fr));
 
     gap: 20px;
+
+    max-width: 850px;
+
+    margin: auto;
 }
 
 .technology-card {
@@ -345,6 +379,156 @@ body {
     font-size: 0.9rem;
 
     color: #94a3b8;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.skills-section {
+    background-color: #0f172a;
+}
+
+.skills-container {
+    max-width: 750px;
+
+    margin: auto;
+
+    background-color: #111827;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    border: 1px solid #1e293b;
+}
+
+.skill {
+    margin-bottom: 28px;
+}
+
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+.skill-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: #e2e8f0;
+
+    font-weight: 500;
+}
+
+.skill-bar {
+    width: 100%;
+
+    height: 10px;
+
+    background-color: #1e293b;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+
+    background-color: #38bdf8;
+
+    border-radius: 10px;
+
+    transition: width 1s ease;
+}
+
+.html-progress {
+    width: 100%;
+}
+
+.css-progress {
+    width: 100%;
+}
+
+.javascript-progress {
+    width: 90%;
+}
+
+.react-progress {
+    width: 80%;
+}
+
+.java-progress {
+    width: 60%;
+}
+
+.python-progress {
+    width: 60%;
+}
+
+
+/* =========================
+   EDUCACIÓN
+========================= */
+
+.education-section {
+    background-color: #111827;
+}
+
+.education-container {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.education-card {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background-color: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #38bdf8;
+}
+
+.education-icon {
+    font-size: 2.2rem;
+}
+
+.education-card h3 {
+    color: white;
+
+    margin-bottom: 8px;
+
+    font-size: 1.1rem;
+}
+
+.education-card p {
+    color: #94a3b8;
+
+    margin-bottom: 5px;
 }
 
 
@@ -458,8 +642,138 @@ footer {
 
 
 /* =========================
+   MODO CLARO
+========================= */
+
+body.light-mode {
+    background-color: #f8fafc;
+
+    color: #0f172a;
+}
+
+body.light-mode .navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border-bottom-color: #cbd5e1;
+}
+
+body.light-mode .logo {
+    color: #0f172a;
+}
+
+body.light-mode .nav-links a {
+    color: #334155;
+}
+
+body.light-mode .nav-links a:hover {
+    color: #38bdf8;
+}
+
+body.light-mode .menu-btn {
+    color: #0f172a;
+}
+
+body.light-mode .theme-btn {
+    color: #0f172a;
+}
+
+body.light-mode .hero h1 {
+    color: #0f172a;
+}
+
+body.light-mode .hero h2 {
+    color: #475569;
+}
+
+body.light-mode .hero-description {
+    color: #475569;
+}
+
+body.light-mode .section-title {
+    color: #0f172a;
+}
+
+body.light-mode .section-description {
+    color: #475569;
+}
+
+body.light-mode .technologies-section,
+body.light-mode .education-section,
+body.light-mode .contact-section {
+    background-color: #e2e8f0;
+}
+
+body.light-mode .about-content,
+body.light-mode .skills-container,
+body.light-mode .projects-empty {
+    background-color: white;
+
+    border-color: #cbd5e1;
+}
+
+body.light-mode .about-content p {
+    color: #334155;
+}
+
+body.light-mode .technology-card,
+body.light-mode .education-card,
+body.light-mode .contact-card {
+    background-color: white;
+
+    border-color: #cbd5e1;
+}
+
+body.light-mode .technology-card h3,
+body.light-mode .education-card h3,
+body.light-mode .projects-empty h3 {
+    color: #0f172a;
+}
+
+body.light-mode .technology-card p,
+body.light-mode .education-card p,
+body.light-mode .projects-empty p {
+    color: #475569;
+}
+
+body.light-mode .skill-info {
+    color: #0f172a;
+}
+
+body.light-mode .skill-bar {
+    background-color: #cbd5e1;
+}
+
+body.light-mode .contact-card {
+    color: #0f172a;
+}
+
+body.light-mode .btn-cv {
+    color: #0f172a;
+}
+
+body.light-mode footer {
+    background-color: #e2e8f0;
+
+    color: #475569;
+}
+
+
+/* =========================
    RESPONSIVE - CELULAR
 ========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+}
+
 
 @media (max-width: 768px) {
 
@@ -471,6 +785,12 @@ footer {
 
     .menu-btn {
         display: block;
+    }
+
+    .theme-btn {
+        margin-left: auto;
+
+        margin-right: 15px;
     }
 
     .nav-links {
@@ -492,6 +812,10 @@ footer {
         background-color: #111827;
 
         border-bottom: 1px solid #1e293b;
+    }
+
+    body.light-mode .nav-links {
+        background-color: white;
     }
 
     .nav-links.active {
@@ -553,6 +877,20 @@ footer {
     }
 
 
+    /* HABILIDADES */
+
+    .skills-container {
+        padding: 25px;
+    }
+
+
+    /* EDUCACIÓN */
+
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+
+
     /* CONTACTO */
 
     .contact-links {
@@ -588,6 +926,10 @@ footer {
         width: 100%;
 
         text-align: center;
+    }
+
+    .education-card {
+        flex-direction: column;
     }
 
 }
