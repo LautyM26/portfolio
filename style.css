@@ -53,9 +53,7 @@ body {
 
 .logo {
     text-decoration: none;
-
     color: white;
-
     font-size: 1.3rem;
     font-weight: 700;
 }
@@ -74,11 +72,8 @@ body {
 
 .nav-links a {
     color: #cbd5e1;
-
     text-decoration: none;
-
     font-size: 0.95rem;
-
     transition: 0.3s;
 }
 
@@ -91,9 +86,7 @@ body {
 
 .theme-btn {
     background: transparent;
-
     border: 1px solid #38bdf8;
-
     color: white;
 
     width: 42px;
@@ -112,7 +105,6 @@ body {
 
 .theme-btn:hover {
     background-color: #38bdf8;
-
     transform: rotate(20deg);
 }
 
@@ -123,9 +115,7 @@ body {
     display: none;
 
     background: none;
-
     border: none;
-
     color: white;
 
     font-size: 1.8rem;
@@ -205,9 +195,7 @@ body {
 
 .hero-buttons {
     display: flex;
-
     gap: 15px;
-
     flex-wrap: wrap;
 }
 
@@ -225,7 +213,6 @@ body {
 
 .btn-primary {
     background-color: #38bdf8;
-
     color: #0f172a;
 }
 
@@ -237,13 +224,11 @@ body {
 
 .btn-secondary {
     border: 1px solid #38bdf8;
-
     color: #38bdf8;
 }
 
 .btn-secondary:hover {
     background-color: #38bdf8;
-
     color: #0f172a;
 }
 
@@ -261,6 +246,69 @@ body {
 
 
 /* =========================
+   TARJETA DE EMAIL
+========================= */
+
+.email-section {
+    padding: 70px 10%;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #0f172a;
+}
+
+.email-card {
+    width: 100%;
+    max-width: 650px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 25px 30px;
+
+    background-color: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.email-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #38bdf8;
+}
+
+.email-icon {
+    font-size: 2.5rem;
+}
+
+.email-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.email-address {
+    color: white;
+
+    font-size: 1.1rem;
+
+    font-weight: 500;
+}
+
+
+/* =========================
    SECCIONES
 ========================= */
 
@@ -270,7 +318,6 @@ body {
 
 .container {
     max-width: 1100px;
-
     margin: auto;
 }
 
@@ -313,7 +360,6 @@ body {
 
 .about-content p {
     color: #cbd5e1;
-
     margin-bottom: 20px;
 }
 
@@ -359,25 +405,21 @@ body {
 
 .technology-card:hover {
     transform: translateY(-8px);
-
     border-color: #38bdf8;
 }
 
 .technology-icon {
     font-size: 2.5rem;
-
     margin-bottom: 15px;
 }
 
 .technology-card h3 {
     color: white;
-
     margin-bottom: 10px;
 }
 
 .technology-card p {
     font-size: 0.9rem;
-
     color: #94a3b8;
 }
 
@@ -437,37 +479,15 @@ body {
 }
 
 .skill-progress {
+    width: 0;
+
     height: 100%;
 
     background-color: #38bdf8;
 
     border-radius: 10px;
 
-    transition: width 1s ease;
-}
-
-.html-progress {
-    width: 100%;
-}
-
-.css-progress {
-    width: 100%;
-}
-
-.javascript-progress {
-    width: 90%;
-}
-
-.react-progress {
-    width: 80%;
-}
-
-.java-progress {
-    width: 60%;
-}
-
-.python-progress {
-    width: 60%;
+    transition: width 1.5s ease;
 }
 
 
@@ -509,7 +529,6 @@ body {
 
 .education-card:hover {
     transform: translateY(-5px);
-
     border-color: #38bdf8;
 }
 
@@ -527,8 +546,158 @@ body {
 
 .education-card p {
     color: #94a3b8;
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   CERTIFICADOS
+========================= */
+
+.certificates-section {
+    background-color: #0f172a;
+}
+
+.certificates-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.certificate-card {
+    background-color: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #38bdf8;
+
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+.certificate-card img {
+    width: 100%;
+
+    height: 200px;
+
+    display: block;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.certificate-card img:hover {
+    transform: scale(1.02);
+}
+
+.certificate-card h3 {
+    color: white;
+
+    font-size: 1rem;
 
     margin-bottom: 5px;
+}
+
+
+/* CERTIFICADO VACÍO */
+
+.certificate-placeholder {
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 2px dashed #334155;
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+}
+
+.certificate-placeholder p {
+    color: #94a3b8;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   MODAL DE IMÁGENES
+========================= */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-close:hover {
+    color: #38bdf8;
 }
 
 
@@ -554,7 +723,6 @@ body {
 
 .projects-icon {
     font-size: 3rem;
-
     margin-bottom: 15px;
 }
 
@@ -647,13 +815,11 @@ footer {
 
 body.light-mode {
     background-color: #f8fafc;
-
     color: #0f172a;
 }
 
 body.light-mode .navbar {
     background-color: rgba(255, 255, 255, 0.95);
-
     border-bottom-color: #cbd5e1;
 }
 
@@ -703,12 +869,30 @@ body.light-mode .contact-section {
     background-color: #e2e8f0;
 }
 
+body.light-mode .email-section {
+    background-color: #f8fafc;
+}
+
+body.light-mode .certificates-section {
+    background-color: #f8fafc;
+}
+
 body.light-mode .about-content,
 body.light-mode .skills-container,
-body.light-mode .projects-empty {
+body.light-mode .projects-empty,
+body.light-mode .email-card,
+body.light-mode .certificate-card {
     background-color: white;
 
     border-color: #cbd5e1;
+}
+
+body.light-mode .email-label {
+    color: #475569;
+}
+
+body.light-mode .email-address {
+    color: #0f172a;
 }
 
 body.light-mode .about-content p {
@@ -725,13 +909,15 @@ body.light-mode .contact-card {
 
 body.light-mode .technology-card h3,
 body.light-mode .education-card h3,
-body.light-mode .projects-empty h3 {
+body.light-mode .projects-empty h3,
+body.light-mode .certificate-card h3 {
     color: #0f172a;
 }
 
 body.light-mode .technology-card p,
 body.light-mode .education-card p,
-body.light-mode .projects-empty p {
+body.light-mode .projects-empty p,
+body.light-mode .certificate-placeholder p {
     color: #475569;
 }
 
@@ -753,7 +939,6 @@ body.light-mode .btn-cv {
 
 body.light-mode footer {
     background-color: #e2e8f0;
-
     color: #475569;
 }
 
@@ -770,6 +955,10 @@ body.light-mode footer {
 
     .nav-links a {
         font-size: 0.85rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -789,7 +978,6 @@ body.light-mode footer {
 
     .theme-btn {
         margin-left: auto;
-
         margin-right: 15px;
     }
 
@@ -854,6 +1042,21 @@ body.light-mode footer {
     }
 
 
+    /* EMAIL */
+
+    .email-section {
+        padding: 50px 7%;
+    }
+
+    .email-card {
+        text-align: center;
+
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+
     /* SECCIONES */
 
     .section {
@@ -872,8 +1075,7 @@ body.light-mode footer {
     /* TECNOLOGÍAS */
 
     .technologies-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 
@@ -887,6 +1089,13 @@ body.light-mode footer {
     /* EDUCACIÓN */
 
     .education-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CERTIFICADOS */
+
+    .certificates-grid {
         grid-template-columns: 1fr;
     }
 
@@ -932,4 +1141,13 @@ body.light-mode footer {
         flex-direction: column;
     }
 
+}
+
+
+/* =========================
+   CORRECCIÓN MODO CLARO
+========================= */
+
+body.light-mode .skills-section .section-title {
+    color: #000000 !important;
 }

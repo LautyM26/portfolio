@@ -54,3 +54,89 @@ themeBtn.addEventListener("click", () => {
     }
 
 });
+
+
+// =========================
+// ANIMACIÓN DE HABILIDADES
+// =========================
+
+const skillsSection = document.querySelector(".skills-section");
+
+const skillProgress = document.querySelectorAll(".skill-progress");
+
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            skillProgress.forEach((skill) => {
+
+                const width = skill.getAttribute("data-width");
+
+                skill.style.width = width + "%";
+
+            });
+
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.3
+
+});
+
+
+observer.observe(skillsSection);
+
+
+// =========================
+// MODAL DE IMÁGENES (LIGHTBOX)
+// =========================
+
+const modal = document.getElementById("image-modal");
+
+const modalImg = document.getElementById("modal-img");
+
+const modalClose = document.getElementById("modal-close");
+
+const certificateImages = document.querySelectorAll(".certificate-card img");
+
+
+certificateImages.forEach((img) => {
+
+    img.addEventListener("click", () => {
+
+        modal.classList.add("active");
+
+        modalImg.src = img.src;
+
+        modalImg.alt = img.alt;
+
+    });
+
+});
+
+
+modalClose.addEventListener("click", () => {
+
+    modal.classList.remove("active");
+
+});
+
+
+modal.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+        modal.classList.remove("active");
+
+    }
+
+});
