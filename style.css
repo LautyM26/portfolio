@@ -213,6 +213,18 @@ body {
     color: #0f172a;
 }
 
+.btn-cv {
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    color: #e2e8f0;
+}
+
+.btn-cv:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
 
 /* =========================
    SECCIONES
