@@ -97,6 +97,41 @@ observer.observe(skillsSection);
 
 
 // =========================
+// ANIMACIÓN AL HACER SCROLL (FADE IN)
+// =========================
+
+const fadeElements = document.querySelectorAll(".fade-in");
+
+const fadeObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+            // Deja de observar el elemento una vez que ya apareció
+            fadeObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+
+    // Se activa cuando el elemento asoma un 15% en la pantalla
+    threshold: 0.15 
+
+});
+
+
+fadeElements.forEach((el) => {
+
+    fadeObserver.observe(el);
+
+});
+
+
+// =========================
 // MODAL DE IMÁGENES (LIGHTBOX)
 // =========================
 
