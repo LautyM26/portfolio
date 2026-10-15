@@ -619,6 +619,13 @@ body {
 }
 
 
+/* Último certificado huérfano centrado (ej: 7 tarjetas en grilla de 3) */
+
+.certificates-grid > .certificate-card:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+}
+
+
 /* =========================
    MODAL DE IMÁGENES
 ========================= */
@@ -718,59 +725,6 @@ body {
 .projects-empty p {
     color: #94a3b8;
     font-size: 1.05rem;
-}
-
-
-/* =========================
-   PROYECTOS CON LINKS
-======================== */
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.project-card {
-    background-color: #111827;
-    border: 1px solid #1e293b;
-    border-radius: 16px;
-    padding: 40px 35px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.project-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    border-color: #00e5ff;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 229, 255, 0.1);
-}
-
-.project-icon {
-    font-size: 3.2rem;
-    animation: float 3s ease-in-out infinite;
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    color: white;
-}
-
-.project-card p {
-    color: #94a3b8;
-    font-size: 1rem;
-    flex: 1;
-}
-
-.project-btn {
-    margin-top: 10px;
 }
 
 
@@ -953,7 +907,6 @@ body.light-mode .certificates-section {
 body.light-mode .about-content,
 body.light-mode .skills-container,
 body.light-mode .projects-empty,
-body.light-mode .project-card,
 body.light-mode .email-card,
 body.light-mode .certificate-card {
     background-color: white;
@@ -962,7 +915,7 @@ body.light-mode .certificate-card {
 }
 
 body.light-mode .email-card:hover, body.light-mode .about-content:hover,
-body.light-mode .projects-empty:hover, body.light-mode .project-card:hover {
+body.light-mode .projects-empty:hover {
     border-color: #0284c7;
 }
 
@@ -995,7 +948,6 @@ body.light-mode .contact-card:hover, body.light-mode .certificate-card:hover {
 body.light-mode .technology-card h3,
 body.light-mode .education-card h3,
 body.light-mode .projects-empty h3,
-body.light-mode .project-card h3,
 body.light-mode .certificate-card h3 {
     color: #0f172a;
 }
@@ -1003,7 +955,6 @@ body.light-mode .certificate-card h3 {
 body.light-mode .technology-card p,
 body.light-mode .education-card p,
 body.light-mode .projects-empty p,
-body.light-mode .project-card p,
 body.light-mode .certificate-placeholder p {
     color: #475569;
 }
@@ -1043,6 +994,14 @@ body.light-mode footer {
     .nav-links { gap: 15px; }
     .nav-links a { font-size: 0.85rem; }
     .certificates-grid { grid-template-columns: repeat(2, 1fr); }
+    /* Huérfano centrado en tablet (grilla de 2) */
+    .certificates-grid > .certificate-card:last-child:nth-child(2n + 1) {
+        grid-column: 1 / -1;
+        max-width: 380px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1086,7 +1045,6 @@ body.light-mode footer {
     .technologies-grid { grid-template-columns: repeat(2, 1fr); }
     .skills-container { padding: 25px; }
     .education-container { grid-template-columns: 1fr; }
-    .projects-grid { grid-template-columns: 1fr; }
     .certificates-grid { grid-template-columns: 1fr; }
     .contact-links { flex-direction: column; }
     .contact-card { justify-content: center; }
